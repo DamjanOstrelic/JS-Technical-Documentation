@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.site-grid {
+  display: grid;
+  grid-template-columns: 15vw 85vw;
+  grid-template-rows: 10vh 88vh 2vh;
+  grid-template-areas:
+    "title title"
+    "sidebar main"
+    "footer footer";
+}
+
+.title {
+  grid-area: title;
+  background-color: lemonchiffon;
+}
+.sidebar {
+  grid-area: sidebar;
+  background-color: lemonchiffon;
+}
+.main {
+  grid-area: main;
+  background-color: lemonchiffon;
+}
+.footer {
+  grid-area: footer;
+  background-color: mediumaquamarine;
+  border-top: 1px solid black;
+}
+
+/* Title CSS */
+div .title {
+  border-bottom: 1px solid black;
+  position: sticky;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 3vh;
+}
+
+/* Sidebar CSS */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  border-right: 1px solid black;
+  overflow-y: auto;
+  min-width: fit-content;
+}
+.sidebar header {
+  font-size: 1.75rem;
+  flex-grow: 1.1;
+  padding-top: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+.sidebar a {
+  border-top: 1px solid black;
+  flex-grow: 1;
+  padding-left: 15px;
+  padding-top: 15px;
+  font-size: 1.25rem;
+}
+.sidebar .last {
+}
+
+/* Main content CSS */
+
+main {
+  overflow-y: auto;
+}
+section header {
+  font-size: 2.25rem;
+  margin: 1rem 1.5rem 2rem 1.5rem;
+}
+
+article {
+  line-height: 1.25rem;
+}
+
+article p {
+  margin: 1rem 3rem 0 3rem;
+  text-align: justify;
+}
+
+article li {
+  margin: 1rem 3rem 0 10rem;
+}
+
+code {
+  background-color: #ccc8c8;
+
+  display: block;
+  white-space: pre;
+  min-width: 60%;
+  width: fit-content;
+  line-height: 1.5rem;
+  min-height: 50px;
+  padding: 0.75rem 5rem 0.5rem 1rem;
+  margin-left: 5rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
